@@ -1,0 +1,218 @@
+
+.container{background:  rgb(235, 238, 191);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+  
+}
+
+
+
+
+
+
+.main{
+  width:70%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 40px;
+  background-image: url("city.jpg");
+  box-shadow: 5px 10px 8px rgba(61, 60, 60, 0.534);
+  
+  
+}
+
+.main .inmain{
+  padding-right: 80px;
+  padding-top:80px;
+  padding-left: 60px;
+  background: rgba(117, 116, 116, 0.76);
+
+ 
+  
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  #thema1{color:white;
+
+   
+    h2{text-transform: capitalize;
+    font-size: 18px;}
+    }
+#thema2 img{width: 200px;
+height: 250px;
+box-shadow: 5px 10px 8px rgba(233, 34, 34, 0.692);
+
+
+}
+
+
+
+}
+
+.navi{
+  width: 30%;
+  
+  background: rgb(235, 238, 191);
+  margin-right: 40px; 
+  overflow: auto;/*aufzug befehl*/
+  height: 700px;
+  border: 10px solid;
+  border-color: rgb(65, 64, 64);
+  
+
+ 
+
+  text-align: left;
+  
+  & p{font-size: 12px;}
+  & a{text-decoration:none;}
+  & :hover{background: olivedrab;}
+
+  & #teil1{color:white;
+
+   
+    h2{text-transform: capitalize;
+    font-size: 18px;
+    margin-top: 0px;
+    padding-top: 10px;
+  }
+    border-bottom:5px solid rgb(65, 64, 64);
+    margin-top:0px;
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    background: rgb(75, 74, 74);
+
+  }
+  & #teil2{
+    h2{text-transform: capitalize;
+      font-size: 18px;}
+    border-bottom:5px solid rgb(65, 64, 64);
+    padding-left: 10px;
+    padding-right: 40px;
+
+    padding-bottom: 10px;
+
+
+  }
+  & #teil3{
+    h2{text-transform: capitalize; 
+      font-size: 18px;}
+    border-bottom:5px solid rgb(65, 64, 64);
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+
+}
+& #teil4{
+  h2{text-transform: capitalize; 
+    font-size: 18px;}
+  border-bottom:5px solid rgb(65, 64, 64);
+  padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+& #teil5{
+  h2{text-transform: capitalize;
+    font-size: 18px;}
+  border-bottom:5px solid rgb(65, 64, 64);
+  padding-left: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+
+}
+}
+
+
+
+
+
+
+
+/*mixin verwenden*/
+@mixin star($color, $size) {
+  .star{
+  width: 0px;
+  height: 0px;
+  margin: $size/2 0;
+  position: relative;
+  display: block;
+  color: $color;
+  border-right: $size solid transparent;
+  border-bottom: $size/100*70 solid $color;
+  border-left: $size solid transparent;
+  transform: rotate(35deg);    &:before {
+    width: 0px;
+    height: 0px;
+      border-bottom: $size/100*80 solid $color;
+      border-left: $size/100*30 solid transparent;
+      border-right: $size/100*30 solid transparent;
+      position: absolute;
+      top: -$size/100*45;
+      left: -$size/100*65;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+  }    &:after {
+      position: absolute;
+      display: block;
+      color: $color;
+      top: $size/100*2;
+      left: -$size/100*105;
+      width: 0px;
+      height: 0px;
+      border-right: $size solid transparent;
+      border-bottom: $size/100*70 solid $color;
+      border-left: $size solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+  }
+}
+}
+@mixin star-nocolor($color, $size) {
+  .star-nocolor{
+  width: 0px;
+  height: 0px;
+  margin: $size/2 0;
+  position: relative;
+  display: block;
+  color: $color;
+  border-right: $size solid transparent;
+  border-bottom: $size/100*70 solid $color;
+  border-left: $size solid transparent;
+  transform: rotate(35deg);    &:before {
+    width: 0px;
+    height: 0px;
+      border-bottom: $size/100*80 solid $color;
+      border-left: $size/100*30 solid transparent;
+      border-right: $size/100*30 solid transparent;
+      position: absolute;
+      top: -$size/100*45;
+      left: -$size/100*65;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+  }    &:after {
+      position: absolute;
+      display: block;
+      color: $color;
+      top: $size/100*2;
+      left: -$size/100*105;
+      width: 0px;
+      height: 0px;
+      border-right: $size solid transparent;
+      border-bottom: $size/100*70 solid $color;
+      border-left: $size solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+  }
+}
+}
+.stars{
+  @include star(black,10px );
+  @include star-nocolor(rgb(70, 68, 68),10px );
+  display: flex;
+  flex-direction: row;
+}

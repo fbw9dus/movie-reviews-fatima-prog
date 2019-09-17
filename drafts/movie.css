@@ -1,0 +1,199 @@
+.container {
+  background: #ebeebf;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.main {
+  width: 70%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 40px;
+  background-image: url("city.jpg");
+  box-shadow: 5px 10px 8px rgba(61, 60, 60, 0.534);
+}
+
+.main .inmain {
+  padding-right: 80px;
+  padding-top: 80px;
+  padding-left: 60px;
+  background: rgba(117, 116, 116, 0.76);
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+}
+.main .inmain #thema1 {
+  color: white;
+}
+.main .inmain #thema1 h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.main .inmain #thema2 img {
+  width: 200px;
+  height: 250px;
+  box-shadow: 5px 10px 8px rgba(233, 34, 34, 0.692);
+}
+
+.navi {
+  width: 30%;
+  background: #ebeebf;
+  margin-right: 40px;
+  overflow: auto;
+  /*aufzug befehl*/
+  height: 700px;
+  border: 10px solid;
+  border-color: #414040;
+  text-align: left;
+}
+.navi p {
+  font-size: 12px;
+}
+.navi a {
+  text-decoration: none;
+}
+.navi :hover {
+  background: olivedrab;
+}
+.navi #teil1 {
+  color: white;
+  border-bottom: 5px solid #414040;
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  background: #4b4a4a;
+}
+.navi #teil1 h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+.navi #teil2 {
+  border-bottom: 5px solid #414040;
+  padding-left: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+.navi #teil2 h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.navi #teil3 {
+  border-bottom: 5px solid #414040;
+  padding-left: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+.navi #teil3 h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.navi #teil4 {
+  border-bottom: 5px solid #414040;
+  padding-left: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+.navi #teil4 h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.navi #teil5 {
+  border-bottom: 5px solid #414040;
+  padding-left: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+}
+.navi #teil5 h2 {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+/*mixin verwenden*/
+.stars {
+  display: flex;
+  flex-direction: row;
+}
+.stars .star {
+  width: 0px;
+  height: 0px;
+  margin: 5px 0;
+  position: relative;
+  display: block;
+  color: black;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid black;
+  border-left: 10px solid transparent;
+  transform: rotate(35deg);
+}
+.stars .star:before {
+  width: 0px;
+  height: 0px;
+  border-bottom: 8px solid black;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  top: -4.5px;
+  left: -6.5px;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+.stars .star:after {
+  position: absolute;
+  display: block;
+  color: black;
+  top: 0.2px;
+  left: -10.5px;
+  width: 0px;
+  height: 0px;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid black;
+  border-left: 10px solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+.stars .star-nocolor {
+  width: 0px;
+  height: 0px;
+  margin: 5px 0;
+  position: relative;
+  display: block;
+  color: #464444;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid #464444;
+  border-left: 10px solid transparent;
+  transform: rotate(35deg);
+}
+.stars .star-nocolor:before {
+  width: 0px;
+  height: 0px;
+  border-bottom: 8px solid #464444;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  top: -4.5px;
+  left: -6.5px;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+.stars .star-nocolor:after {
+  position: absolute;
+  display: block;
+  color: #464444;
+  top: 0.2px;
+  left: -10.5px;
+  width: 0px;
+  height: 0px;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid #464444;
+  border-left: 10px solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+
+/*# sourceMappingURL=movie.css.map */
